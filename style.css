@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body */
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 1000vh;
+    overflow-x: hidden;
+    font-family: 'Albert Sans', sans-serif;
+    background-image: repeating-linear-gradient(90deg, rgba(60, 102, 231,0.08) 0px, rgba(60, 102, 231,0.08) 1px,transparent 1px, transparent 9px),repeating-linear-gradient(0deg, rgba(60, 102, 231,0.08) 0px, rgba(60, 102, 231,0.08) 1px,transparent 1px, transparent 9px),linear-gradient(90deg, rgb(57, 58, 88),rgb(176, 24, 213));
+}
+
+/* .header-wrapper */
+.header-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* .header-area */
+.header-area {
+    max-width: 1200px;
+    width: 100%;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 2rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 1rem;
+}
+
+/* .header-logo, .header-user-profile */
+.header-logo ,
+.header-user-profile {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* .header-logo img, .header-user-profile img */
+.header-logo img,
+.header-user-profile img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+/* .header-user-profile img */
+.header-user-profile img{
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+/* .header-menu */
+.header-menu{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* .header-menu-list */
+.header-menu-list {
+    display: flex;
+    align-items: center;
+}
+
+/* .header-menu-list li */
+.header-menu-list li {
+    list-style: none;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+}
+
+/* .header-menu-list li a */
+.header-menu-list li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* .header-menu-list li a i */
+.header-menu-list li a i {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+}
+
+/* .header-menu-list li:hover */
+.header-menu-list li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    backdrop-filter: blur(20px);
+}
+
+/* .menu-item-has-children */
+.header-menu-list li.menu-item-has-children {
+    position: relative;
+}
+
+/* ul li .submenu */
+ul li .submenu {
+    position: absolute;
+    width: 200px;
+    display: block;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    top: 150%;
+    z-index: 2;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    border-top: 5px solid #49AF45;
+    border-radius: 3px 3px 0 0;
+}
+
+/* ul li:hover .submenu */
+ul li:hover .submenu {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+}
+
+/* ul li .submenu li a:hover */
+ul li .submenu li a:hover {
+    color: #fff !important;
+}
+
+/* .header-menu-list li ul li:not(:first-child):hover */
+.header-menu-list li ul li:not(:first-child):hover {
+    border-radius: 0;
+    border-top: 5px solid #49AF45;
+    width: 100%;
+    backdrop-filter: blur(20px);
+}
